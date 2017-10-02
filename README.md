@@ -1,5 +1,7 @@
 <p align="center">
+  <img alt="Profile Image Oleg Shalygin" src="docs/github_logo.png" height="100" />
   <img alt="Profile Image Oleg Shalygin" src="docs/oleg_shalygin.png" height="100" />
+  <img alt="Profile Image Oleg Shalygin" src="docs/react_logo.png" height="100" />
   <h3 align="center">Oleg Shalygin</h3>
   <p align="center">Personal Website</p>
   <p align="center">
