@@ -1,15 +1,8 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
+/* TEAM */
 
-  <name> -- <role> -- <twitter>
-
-# THANKS
-
-  <name>
-
-# TECHNOLOGY COLOPHON
-
-  CSS3, HTML5, JavaScript
-  React Starter Kit -- https://reactstarter.com/
+  Oleg Shalygin
+  Site: https://www.oshalygin.com
+  Location: North Hollywood, CA
