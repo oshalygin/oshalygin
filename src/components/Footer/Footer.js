@@ -1,28 +1,27 @@
 import React from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Footer.css';
+import './Footer.css';
 import Link from '../Link';
 
 class Footer extends React.Component {
   render() {
     return (
-      <div className={s.root}>
-        <div className={s.container}>
-          <span className={s.text}>© Your Company</span>
-          <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/">
+      <div styleName="root">
+        <div styleName="container">
+          <span styleName="text">© Your Company</span>
+          <span styleName="spacer">·</span>
+          <Link styleName="link" to="/">
             Home
           </Link>
-          <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/admin">
+          <span styleName="spacer">·</span>
+          <Link styleName="link" to="/admin">
             Admin
           </Link>
-          <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/privacy">
+          <span styleName="spacer">·</span>
+          <Link styleName="link" to="/privacy">
             Privacy
           </Link>
-          <span className={s.spacer}>·</span>
-          <Link className={s.link} to="/not-found">
+          <span styleName="spacer">·</span>
+          <Link styleName="link" to="/not-found">
             Not Found
           </Link>
         </div>
@@ -31,4 +30,4 @@ class Footer extends React.Component {
   }
 }
 
-export default withStyles(s)(Footer);
+export default Footer;

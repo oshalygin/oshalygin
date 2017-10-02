@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import AssetsPlugin from 'assets-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import nodeExternals from 'webpack-node-externals';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import overrideRules from './lib/overrideRules';
@@ -92,6 +93,13 @@ const config = {
             // Adds __self attribute to JSX which React will use for some warnings
             // https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx-self
             ...(isDebug ? ['transform-react-jsx-self'] : []),
+            [
+              'react-css-modules',
+              {
+                // removeImport: true,
+                generateScopedName: '[name]-[local]-[hash:base64:5]',
+              },
+            ],
           ],
         },
       },
@@ -100,11 +108,11 @@ const config = {
       {
         test: reStyle,
         rules: [
-          // Convert CSS into JS module
-          {
-            issuer: { not: [reStyle] },
-            use: 'isomorphic-style-loader',
-          },
+          // // Convert CSS into JS module
+          // {
+          //   issuer: { not: [reStyle] },
+          //   use: 'isomorphic-style-loader',
+          // },
 
           // Process external/third-party styles
           {
@@ -127,9 +135,7 @@ const config = {
               sourceMap: isDebug,
               // CSS Modules https://github.com/css-modules/css-modules
               modules: true,
-              localIdentName: isDebug
-                ? '[name]-[local]-[hash:base64:5]'
-                : '[hash:base64:5]',
+              localIdentName: '[name]-[local]-[hash:base64:5]',
               // CSS Nano http://cssnano.co/options/
               minimize: !isDebug,
               discardComments: { removeAll: true },
@@ -287,7 +293,7 @@ const clientConfig = {
       'process.env.BROWSER': true,
       __DEV__: isDebug,
     }),
-
+    new ExtractTextPlugin('bundle.css'),
     // Emit a file with assets paths
     // https://github.com/sporto/assets-webpack-plugin#options
     new AssetsPlugin({

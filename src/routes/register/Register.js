@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Register.css';
+import './Register.css';
 
 class Register extends React.Component {
   static propTypes = {
@@ -10,8 +9,8 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div className={s.root}>
-        <div className={s.container}>
+      <div styleName="root">
+        <div styleName="container">
           <h1>{this.props.title}</h1>
           <p>...</p>
         </div>
@@ -20,4 +19,4 @@ class Register extends React.Component {
   }
 }
 
-export default withStyles(s)(Register);
+export default Register;
