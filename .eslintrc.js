@@ -12,7 +12,7 @@ module.exports = {
     'prettier/react',
   ],
 
-  plugins: ['flowtype', 'css-modules', 'prettier'],
+  plugins: ['flowtype', 'css-modules', 'prettier', 'jest', 'react'],
 
   globals: {
     __DEV__: true,
@@ -49,6 +49,11 @@ module.exports = {
     // babel-plugin-transform-react-pure-class-to-function
     // https://github.com/kriasoft/react-starter-kit/pull/961
     'react/prefer-stateless-function': 'off',
+
+    // Jest configuration
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
 
     // ESLint plugin for prettier formatting
     // https://github.com/prettier/eslint-plugin-prettier
