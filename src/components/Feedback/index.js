@@ -1,6 +1,6 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Feedback.css';
+import s from './feedback.css';
 
 class Feedback extends React.Component {
   render() {
