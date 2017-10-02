@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Profile Image Oleg Shalygin" style="border: 3px solid; border-radius: 15px;" src="docs/oleg_shalygin.png" height="140" />
+  <img alt="Profile Image Oleg Shalygin" src="docs/oleg_shalygin.png" height="100" />
   <h3 align="center">Oleg Shalygin</h3>
   <p align="center">Personal Website</p>
   <p align="center">
