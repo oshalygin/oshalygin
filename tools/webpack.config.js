@@ -293,7 +293,10 @@ const clientConfig = {
       'process.env.BROWSER': true,
       __DEV__: isDebug,
     }),
-    new ExtractTextPlugin('bundle.css'),
+    new ExtractTextPlugin({
+      filename: '[name].[chunkhash].min.css',
+      allChunks: true,
+    }),
     // Emit a file with assets paths
     // https://github.com/sporto/assets-webpack-plugin#options
     new AssetsPlugin({

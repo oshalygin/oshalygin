@@ -14,6 +14,13 @@ import router from './router';
 import assets from './assets.json'; // eslint-disable-line import/no-unresolved
 import config from './config';
 
+const hook = require('css-modules-require-hook');
+
+hook({
+  generateScopedName: '[name]-[local]-[hash:base64:5]', // Make sure this is the same in your webpack config
+  extensions: ['.css'], // or whatever you're using
+});
+
 const app = express();
 
 //
@@ -66,7 +73,7 @@ app.get('*', async (req, res, next) => {
     }
 
     const data = { ...route };
-    console.log(data);
+
     data.children = ReactDOM.renderToString(
       <App context={context}>{route.component}</App>,
     );
